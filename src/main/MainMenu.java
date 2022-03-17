@@ -19,7 +19,6 @@ public class MainMenu {
 	private Image soundon;
 	private Image musicoff;
 	private Image musicon;
-	private Image LevelScreenBackground;
 	private static String filePath = Files.getDefaultDirectory() + "/BrickBreaker/";
 	public static String LEVELPATH = Files.getDefaultDirectory() + "/BrickBreaker/Levels.txt";
 

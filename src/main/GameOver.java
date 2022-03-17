@@ -24,7 +24,7 @@ public class GameOver {
 	
 	public GameOver() {
 		mainMenu = new Rectangle(Frame.WIDTH/2-60, 380, 150, 55);
-		background = new ImageLoader(ImageLoader.titleScreenBackground).getImage();
+		background = Toolkit.getDefaultToolkit().createImage("images/GameOverBackground.gif");
 		soundoff = new ImageLoader(ImageLoader.soundoff).getImage();
 		soundon = new ImageLoader(ImageLoader.soundon).getImage();
 		musicoff = new ImageLoader(ImageLoader.musicoff).getImage();
@@ -65,7 +65,7 @@ public class GameOver {
 						BgmLoader.MuteBGM();
 					}else{
 						BgmLoader.UnmuteBGM();
-						BgmLoader.BGM(BgmLoader.MainMenuBGM);
+						BgmLoader.BGM(BgmLoader.GameOverBGM);
 						BgmLoader.PlayBGM();
 					}
 				}else{

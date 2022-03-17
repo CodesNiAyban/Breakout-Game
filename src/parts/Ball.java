@@ -115,8 +115,7 @@ public class Ball{
 								bricks[i].hasCollided();
 							}else {
 								SELoader.SE(SELoader.FireCollision);
-								bricks[i].hasCollided();
-								bricks[i].hasCollided();
+								bricks[i].destroyed();
 								switchDirections(bricks[i]);
 							}
 						}

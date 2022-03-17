@@ -48,7 +48,6 @@ public class Game extends JPanel{
 	private Image lvl6;
 	private Image lvl7;
 	
-	
 	private Powerup[] powerups;
 	private int[][] gridPos = new int[8][10];
  	private int score = 0;
@@ -75,7 +74,7 @@ public class Game extends JPanel{
 		musicoff = new ImageLoader(ImageLoader.musicoff).getImage();
 		musicon = new ImageLoader(ImageLoader.musicon).getImage();
 		paddle = new Paddle(Frame.WIDTH/2-50, 400);
-		balls = new Ball[3];
+		balls = new Ball[10];
 		balls[0] = new Ball(paddle.getX()+paddle.width/2-12, paddle.getY()-paddle.height/2-10, false);
 		totalBallCount = 1;
 		gridPos = Level.getLevel(level);
@@ -124,6 +123,16 @@ public class Game extends JPanel{
 						}else {
 							balls[i] = null;
 							totalBallCount--;
+						}
+					}
+					
+					if(balls[0].getY() < Frame.HEIGHT-50) {
+						if((balls[0].getX() < paddle.getX()+paddle.getWidth()/2) && paddle.getX() > 0) {
+							paddle.moveLeft();
+						}
+						
+						if((balls[0].getX() > paddle.getX()+paddle.getWidth()/2) && paddle.getX()+paddle.getWidth() < 516) {
+							paddle.moveRight();
 						}
 					}
 				}

@@ -35,6 +35,7 @@ public class WinScreen {
 		soundon = new ImageLoader(ImageLoader.soundon).getImage();
 		musicoff = new ImageLoader(ImageLoader.musicoff).getImage();
 		musicon = new ImageLoader(ImageLoader.musicon).getImage();
+		
 		if(Controller.level+1 < Level.MAX_LEVEL && Level.lockedLevels[Controller.level+1]) {
 			unlockedNewLevel = true;
 		}
@@ -173,7 +174,7 @@ public class WinScreen {
 			g.setColor(Color.white);
 			g.drawRect(140, 235, 210, 45);
 			g.drawRect(140, 310, 210, 45);
-			for(int i = 0; i < bounds.length; i++) {
+			for(int i = 0; i < 2; i++) {
 				if(bounds[i].contains(Controller.mousePoint)) {
 					g.drawRect(bounds[i].x, bounds[i].y, bounds[i].width, bounds[i].height);
 					g.setColor(new Color(255, 255, 255, 150));

@@ -98,7 +98,7 @@ public class PickLevel {
 		g.setFont(Controller.bigFont);
 		g.drawImage(LevelScreenBackground, 0, 0, Frame.WIDTH, Frame.WIDTH, null);
 		g.setColor(Color.white);
-		g.drawString("Choose Level", Frame.WIDTH/2-g.getFontMetrics().stringWidth("Choose Level")/2, 80);
+		g.drawString("WORLD 1-1", Frame.WIDTH/2-g.getFontMetrics().stringWidth("WORLD 1-1")/2, 80);
 		
 		for(int i = 0; i < levels.length; i++) {
 			g.setColor(Color.white);

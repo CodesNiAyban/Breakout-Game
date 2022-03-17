@@ -34,8 +34,8 @@ public class Controller extends JPanel implements Runnable {
 	private static MainMenu menu;
 	private PickLevel pickLevel;
 	public static Point mousePoint = new Point(0, 0);
-	public static Font bigFont = new Font("TimesRoman", Font.PLAIN, 25);
-	public static Font smallFont = new Font("TimesRoman", Font.PLAIN, 18);
+	public static Font bigFont = new Font("Arcadia", Font.BOLD, 25);
+	public static Font smallFont = new Font("Arcadia", Font.BOLD, 15);
 	
 	private boolean running = true;
 	private static final long serialVersionUID = 1L;

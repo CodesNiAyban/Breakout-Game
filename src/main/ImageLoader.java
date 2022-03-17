@@ -9,6 +9,7 @@ public class ImageLoader {
 	private BufferedImage img;
 	public static String titleScreenBackground = "/BrickBreakerBackground.png";
 	public static String LevelScreenBackground = "/LevelScreenBackground.png";
+	public static String GameOverBackground = "/GameOverBackground.gif";
 	public static String paddle = "/Paddle.png";
 	public static String brick = "/Bricks.png";
 	public static String ball = "/Ball.png";
