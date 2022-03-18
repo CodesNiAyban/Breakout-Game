@@ -21,31 +21,33 @@ public class SELoader {
 	public static String Win = "soundeffects/Win.wav";
 	static Boolean muteSE = false;
 	static Clip fx;
+
 	public SELoader() {
-		
+
 	}
-	
+
 	public static void SE(String BgmLocation) {
-		if(!muteSE) {
+		if (!muteSE) {
 			try {
-				File musicPath = new File (BgmLocation);
-				
-				if(musicPath.exists()) {
+				File musicPath = new File(BgmLocation);
+
+				if (musicPath.exists()) {
 					AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
 					fx = AudioSystem.getClip();
 					fx.open(audioInput);
-					fx.start(); 
+					fx.start();
 				}
-			}catch(Exception ex) {
+			} catch (Exception ex) {
 				ex.printStackTrace();
 			}
-		}	
+		}
 	}
-	public static void MuteSE(){
+
+	public static void MuteSE() {
 		muteSE = true;
 	}
-	
-	public static void UnmuteBGM(){
+
+	public static void UnmuteBGM() {
 		muteSE = false;
 	}
 }

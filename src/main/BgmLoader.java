@@ -6,7 +6,8 @@ import java.io.File;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
-//Create music background.
+
+//Create background music 
 public class BgmLoader {
 	public static String MainMenuBGM = "bgm/MainMenuBGM.wav";
 	public static String LevelMenuBGM = "bgm/LevelMenuBGM.wav";
@@ -24,46 +25,47 @@ public class BgmLoader {
 	static Clip bgm;
 	static long pause;
 	static Boolean muteBGM = false;
+
 	public BgmLoader() {
-		
+
 	}
-	
-	public static void BGM(String BgmLocation) {
+
+	public static void BGM(String BgmLocation) { // Create BGM
 		try {
-			File musicPath = new File (BgmLocation);
-			
-			if(musicPath.exists()) {
+			File musicPath = new File(BgmLocation);
+
+			if (musicPath.exists()) {
 				AudioInputStream audioInput = AudioSystem.getAudioInputStream(musicPath);
 				bgm = AudioSystem.getClip();
 				bgm.open(audioInput);
 			}
-		}catch(Exception ex) {
+		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
-		
+
 	}
-	
-	public static void PlayBGM(){
-		if(!muteBGM) {
+
+	public static void PlayBGM() { // Play
+		if (!muteBGM) {
 			bgm.setMicrosecondPosition(pause);
 			bgm.start();
 			bgm.loop(Clip.LOOP_CONTINUOUSLY);
 		}
 	}
-	
-	public static void StopBGM(){
+
+	public static void StopBGM() { //Stop
 		pause = 0;
 		bgm.stop();
 	}
-	
-	public static void MuteBGM(){
+
+	public static void MuteBGM() { //Mute
 		pause = bgm.getMicrosecondPosition();
 		muteBGM = true;
 		bgm.stop();
 	}
-	
-	public static void UnmuteBGM(){
+
+	public static void UnmuteBGM() { //Unmute
 		muteBGM = false;
 	}
-	
+
 }
