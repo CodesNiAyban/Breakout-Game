@@ -10,6 +10,6 @@ http://www.neehaw.com/Projects/Item.php?ID=10
 ### Main Menu
 ![Breakout game Main Menu](images/BrickBreakerBackground.gif)
 ### Level Menu
-![Breakout game Level Menu](images/level menu.png)
+![Breakout game Level Menu](images/level manu.png)
 ### Game
-![Breakout game MainMenu](images/game.png)
+![Breakout game MainMenu](images/game.PNG)
