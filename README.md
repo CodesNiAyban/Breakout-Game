@@ -7,6 +7,9 @@ There is a double array of numbers in this game, which is how it works. This is 
 This code is based on:
 http://www.neehaw.com/Projects/Item.php?ID=10
 
+###Main Menu
 ![Breakout game Main Menu](images/BrickBreakerBackground.gif)
-![Breakout game Level Menu](images/BrickBreakerBackground.gif)
-![Breakout game MainMenu](images/BrickBreakerBackground.gif)
+###Main Menu
+![Breakout game Level Menu](images/level menu.gif)
+###Main Menu
+![Breakout game MainMenu](images/game.gif)
