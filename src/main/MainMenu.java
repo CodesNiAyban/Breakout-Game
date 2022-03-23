@@ -26,12 +26,12 @@ public class MainMenu {
 	public static String LEVELPATH = Files.getDefaultDirectory() + "/BrickBreaker/Levels.txt";
 
 	public MainMenu() {
+		//logo = new ImageLoader(ImageLoader.logo).getImage();
 		titleScreenBackground = Toolkit.getDefaultToolkit().createImage("images/BrickBreakerBackground.gif");
 		soundoff = new ImageLoader(ImageLoader.soundoff).getImage();
 		soundon = new ImageLoader(ImageLoader.soundon).getImage();
 		musicoff = new ImageLoader(ImageLoader.musicoff).getImage();
 		musicon = new ImageLoader(ImageLoader.musicon).getImage();
-		logo = new ImageLoader(ImageLoader.logo).getImage();
 		BgmLoader.BGM(BgmLoader.MainMenuBGM);
 		BgmLoader.PlayBGM();
 	}
@@ -97,7 +97,7 @@ public class MainMenu {
 
 	public void render(Graphics g) {
 		g.drawImage(titleScreenBackground, 0, 0, Frame.WIDTH, Frame.WIDTH, null);
-		g.drawImage(logo, logorect[0].x, logorect[0].y, logorect[0].width, logorect[0].height, null);
+		//g.drawImage(logo, logorect[0].x, logorect[0].y, logorect[0].width, logorect[0].height, null);
 		g.setColor(Color.white);
 		for (int i = 0; i < bounds.length; i++) {
 			if (bounds[i].contains(Controller.mousePoint)) {
