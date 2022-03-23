@@ -5,7 +5,7 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-public class ImageLoader {
+public class ImageLoader { //used to load image 
 	private BufferedImage img;
 	public static String titleScreenBackground = "/BrickBreakerBackground.png";
 	public static String LevelScreenBackground = "/LevelScreenBackground.png";
@@ -32,6 +32,7 @@ public class ImageLoader {
 	public static String lvl5 = "images/BG_Lvl5.gif";
 	public static String lvl6 = "images/BG_Lvl6.gif";
 	public static String lvl7 = "images/BG_Lvl7.gif";
+	public static String logo = "images/logo.png";
 
 	public ImageLoader(String path) { 
 		try {

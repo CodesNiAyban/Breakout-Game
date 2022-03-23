@@ -129,16 +129,6 @@ public class Game extends JPanel {
 						}
 					}
 					
-					// Auto Play
-					if(balls[0].getY() < Frame.HEIGHT-50) {
-						if((balls[0].getX() < paddle.getX()+paddle.getWidth()/2) && paddle.getX() > 0) {
-							paddle.moveLeft();
-						}
-						
-						if((balls[0].getX() > paddle.getX()+paddle.getWidth()/2) && paddle.getX()+paddle.getWidth() < 516) {
-							paddle.moveRight();
-						}
-					}
 				}
 			}
 			for (int i = 0; i < bricks.length; i++) { // Bricks

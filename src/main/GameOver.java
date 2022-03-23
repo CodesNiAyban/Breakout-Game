@@ -34,7 +34,7 @@ public class GameOver { // Game over menu
 		for (int i = 0; i < bounds.length; i++) { // Main menu and retry
 			if (bounds[i].contains(Controller.mousePoint) && MouseHandler.MOUSEDOWN) { // Retry
 				MouseHandler.MOUSEDOWN = false;
-				if (i == 0) {
+				if (i == 0) { // background music caller
 					SELoader.SE(SELoader.Click);
 					BgmLoader.StopBGM();
 					if (Controller.level == 0)

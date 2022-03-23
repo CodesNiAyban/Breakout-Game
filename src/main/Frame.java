@@ -3,7 +3,7 @@ package main;
 import javax.swing.JFrame;
 
 public class Frame {
-	// Call frame
+	// Create Frame
 	private static JFrame frame;
 	public static int WIDTH = 500;
 	public static int HEIGHT = 500;

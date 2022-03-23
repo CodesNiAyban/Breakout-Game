@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Files { // File handling
 
 	private static String filePath = getDefaultDirectory() + "/BrickBreaker/";
-	public static String LEVELPATH = getDefaultDirectory() + "/BrickBreaker/Levels.txt";
+	public static String LEVELPATH = getDefaultDirectory() + "/BrickBreaker/Levels.txt";//File directory for levels
 
 	public Files() {
 

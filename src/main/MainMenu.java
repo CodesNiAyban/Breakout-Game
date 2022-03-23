@@ -9,16 +9,19 @@ import files.Level;
 import handlers.MouseHandler;
 
 public class MainMenu {
-
+// Too make sure that the ball will not exceed 
 	private Rectangle[] bounds = { new Rectangle(140, 235, 210, 45), new Rectangle(140, 310, 210, 45) };
 
 	private Rectangle[] options = { new Rectangle(460, 8, 30, 30), new Rectangle(420, 8, 30, 30) };
+	
+	private Rectangle[] logorect = { new Rectangle(400, 8, 30, 30)};
 	
 	private Image titleScreenBackground;
 	private Image soundoff;
 	private Image soundon;
 	private Image musicoff;
 	private Image musicon;
+	private Image logo;
 	private static String filePath = Files.getDefaultDirectory() + "/BrickBreaker/";
 	public static String LEVELPATH = Files.getDefaultDirectory() + "/BrickBreaker/Levels.txt";
 
@@ -28,6 +31,7 @@ public class MainMenu {
 		soundon = new ImageLoader(ImageLoader.soundon).getImage();
 		musicoff = new ImageLoader(ImageLoader.musicoff).getImage();
 		musicon = new ImageLoader(ImageLoader.musicon).getImage();
+		logo = new ImageLoader(ImageLoader.logo).getImage();
 		BgmLoader.BGM(BgmLoader.MainMenuBGM);
 		BgmLoader.PlayBGM();
 	}
@@ -93,6 +97,7 @@ public class MainMenu {
 
 	public void render(Graphics g) {
 		g.drawImage(titleScreenBackground, 0, 0, Frame.WIDTH, Frame.WIDTH, null);
+		g.drawImage(logo, logorect[0].x, logorect[0].y, logorect[0].width, logorect[0].height, null);
 		g.setColor(Color.white);
 		for (int i = 0; i < bounds.length; i++) {
 			if (bounds[i].contains(Controller.mousePoint)) {

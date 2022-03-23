@@ -17,7 +17,7 @@ public class MouseHandler implements MouseMotionListener, MouseListener {  // Mo
 
 	public void mouseClicked(MouseEvent e) {
 	}
-	// Mouse
+	// Used when clicking 
 	public void mousePressed(MouseEvent e) {
 		if (!hasPressed) {
 			MOUSEDOWN = true;
@@ -39,7 +39,7 @@ public class MouseHandler implements MouseMotionListener, MouseListener {  // Mo
 	public void mouseDragged(MouseEvent e) {
 		MOUSEDOWN = false;
 	}
-
+	//do detect/show the cursor
 	public void mouseMoved(MouseEvent e) {
 		Controller.mousePoint = e.getPoint();
 	}
